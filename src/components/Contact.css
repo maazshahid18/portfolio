@@ -95,6 +95,10 @@
     .contact-grid {
         grid-template-columns: 1fr;
     }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
 }
 
 .spin {

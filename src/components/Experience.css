@@ -140,4 +140,9 @@
         padding-right: 0 !important;
         margin: 0 !important;
     }
+
+    .job-card {
+        padding: 1.5rem;
+        /* Reduce padding slightly on mobile */
+    }
 }
