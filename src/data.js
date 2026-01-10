@@ -19,8 +19,9 @@ export const experience = [
       "Promoted from Associate Software Engineer to Software Engineer based on performance and initiative.",
       "Took ownership of DevOps, database management, and project architecture, demonstrating end-to-end technical leadership.",
       "Upgraded company servers and cloud infrastructure, increasing performance by 40% while reducing monthly server costs by 45%.",
-      "Created engaging frontend animations, improved SEO, and enhanced website loading speed.",
-      "Led and contributed to multiple critical projects, including a Lead Management System and various internal tools.",
+      "Spearheaded initiatives to improve UI/UX, SEO, and core website performance, implementing best practices that resulted in superior search rankings and user engagement.",
+      "Led the development of Leadforge, a comprehensive CMS and LMS panel, streamlining lead management and learning processes.",
+      "Integrated Ozonetel dialer and calling system into the lead panel, enabling seamless communication and efficient lead follow-ups.",
       "Built dynamic forms and intricate grid views using React Hook Form, Zod validations, and reusable components."
     ]
   },

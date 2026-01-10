@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maaz bin Shahid - Resume</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* General Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f0f2f5;
+            padding: 25px;
+        }
+
+        .resume-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Section */
+        .header {
+            background: white;
+            color: black;
+            padding: 5px 20px;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: 1.5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Adjusted Contact Info Styling */
+        .contact-info {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+            opacity: 0.95;
+            display: flex;
+            /* Use flexbox for better alignment */
+            flex-wrap: wrap;
+            /* Allow items to wrap on smaller screens */
+            gap: 15px;
+            /* Spacing between contact items */
+            align-items: center;
+            /* Vertically align items */
+        }
+
+        .contact-info span {
+            display: flex;
+            /* Make each span a flex container for icon and text */
+            align-items: center;
+            gap: 5px;
+            /* Space between icon and text */
+        }
+
+        .contact-info i {
+            color: #1a2a6c;
+            /* Icon color */
+            font-size: 1.1em;
+        }
+
+        .summary {
+            font-size: 1em;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0;
+            opacity: 0.98;
+            font-weight: 300;
+            text-align: left;
+        }
+
+        /* Content Sections */
+        .content {
+            padding: 10px 20px 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8em;
+            color: black;
+            border-bottom: 3px solid grey;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        /* Job Experience */
+        .job {
+            margin-bottom: 15px;
+            border-left: 4px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .job:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-header {
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-size: 1.25em;
+            font-weight: 700;
+            color: #1a2a6c;
+            margin-bottom: 0px;
+        }
+
+        .company {
+            font-size: 1.05em;
+            color: #b21f1f;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .duration {
+            color: #666;
+            font-style: normal;
+            font-size: 0.85em;
+            font-weight: 400;
+        }
+
+        .achievements {
+            list-style: none;
+            margin-top: 4px;
+        }
+
+        .achievements li {
+            margin-bottom: 4px;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.6;
+            font-size: 0.9em;
+            color: #444;
+        }
+
+        .achievements li b {
+            font-weight: 600;
+            color: #1a2a6c;
+        }
+
+        .achievements li:before {
+            content: "•";
+            color: grey;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.1em;
+            line-height: 1;
+        }
+
+        /* Education Section - Side by Side Layout */
+        .education-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding-bottom: 10px;
+            margin-bottom: 45px;
+        }
+
+        .education {
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .degree {
+            font-size: 1.15em;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+
+        .university {
+            color: #b21f1f;
+            font-size: 1em;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .edu-details {
+            font-size: 0.85em;
+            line-height: 1.4;
+        }
+
+        /* Compact Skills Section */
+        .skills-compact {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 6px 6px;
+            margin-top: 6px;
+        }
+
+        .skill-category {
+            padding: 6px 6px;
+            background: #f8fafd;
+            border-radius: 4px;
+        }
+
+        .skill-category h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: #1a2a6c;
+            margin-bottom: 4px;
+            font-size: 0.85em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .skill-tags {
+            font-size: 0.75em;
+            line-height: 1.3;
+            color: #555;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .education-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .skills-compact {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                /* Stack contact info on small screens */
+                align-items: flex-start;
+                /* Align to the start when stacked */
+                gap: 8px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .section-title {
+                border-color: grey !important;
+            }
+
+            .job,
+            .education {
+                border-color: grey !important;
+            }
+
+            .achievements li:before {
+                color: grey !important;
+            }
+
+            .education-container {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 15px !important;
+            }
+
+            .skills-compact {
+                display: grid !important;
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+                gap: 12px 18px !important;
+                margin-top: 8px !important;
+            }
+
+            .skill-category {
+                padding: 4px 6px !important;
+                background: #f8fafd !important;
+                border-radius: 4px !important;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="resume-container">
+        <div class="header">
+            <h1 class="name">MAAZ BIN SHAHID</h1>
+            <div class="contact-info">
+                <span><i class="fas fa-map-marker-alt"></i> Delhi(NCR), IN</span>
+                <span><i class="fas fa-phone-alt"></i> +91-9999852954</span>
+                <span><i class="fas fa-envelope"></i> mzperwez786@gmail.com</span>
+                <span><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/maaz-bin-shahid-3a47921a7/"
+                        target="_blank"
+                        style="color: #1a2a6c; text-decoration: none;">linkedin.com/in/maaz-bin-shahid</a></span>
+                <span><i class="fab fa-github"></i> <a href="https://github.com/Maazbinshahid" target="_blank"
+                        style="color: #1a2a6c; text-decoration: none;">github.com/Maazbinshahid</a></span>
+            </div>
+            <p class="summary">
+                Versatile <b>Software Engineer</b> with a strong grasp of modern frameworks and UI/UX best practices.
+                Known for a dynamic approach to handling backend integration, REST APIs, and database interactions when
+                needed. Skilled at building <b>responsive, high-performance web apps</b> with a keen eye for detail and
+                user experience. Quick to adapt, collaborate, and deliver under tight timelines.
+            </p>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">Professional Experience</h2>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Software Engineer</div>
+                        <div class="company">91Trucks | Gurgaon, IN</div>
+                        <div class="duration">2024 – Present</div>
+                    </div>
+                    <ul class="achievements">
+                        <li><b>Promoted</b> from Associate Software Engineer to Software Engineer based on performance
+                            and initiative.</li>
+                        <li>Took ownership of DevOps, database management, and project architecture, demonstrating
+                            end-to-end technical leadership.</li>
+                        <li><b>Upgraded company servers and cloud infrastructure</b>, significantly <b>increasing
+                                performance by 40%</b> while <b>reducing monthly server costs by 45%</b>.</li>
+                        <li>Spearheaded initiatives to <b>improve UI/UX, SEO, and core website performance</b>,
+                            implementing best practices that resulted in superior search rankings and user engagement.
+                        </li>
+                        <li>Led the development of <b>Leadforge</b>, a comprehensive <b>CMS and LMS panel</b>,
+                            streamlining lead management and learning processes.</li>
+                        <li>Integrated <b>Ozonetel dialer and calling system</b> into the lead panel, enabling
+                            seamless communication and efficient lead follow-ups.</li>
+                        <li>Built dynamic forms and intricate grid views using <b>React Hook Form</b>, <b>Zod
+                                validations</b>, and reusable components for robust data management.</li>
+                        <li>Strengthened code quality and scalability, collaborating closely with cross-functional teams
+                            to deliver high-impact solutions.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Associate Software Engineer</div>
+                        <div class="company">91Trucks | Gurgaon, IN</div>
+                        <div class="duration">2022 – 2024</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Joined as a fresher through campus placement in a fast-paced startup environment, quickly
+                            adapting to industry demands.</li>
+                        <li>Actively contributed to frontend development using <b>ReactJS</b> and <b>Next.js</b>,
+                            building responsive and interactive user interfaces.</li>
+                        <li>Acquired hands-on experience in <b>MySQL databases</b> and proficiently implemented <b>API
+                                integrations</b> for seamless data flow.</li>
+                        <li>Developed strong problem-solving skills, fostered team collaboration, and earned
+                            comprehensive experience in full-stack feature development.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-compact">
+                    <div class="skill-category">
+                        <h4>Frontend</h4>
+                        <div class="skill-tags">HTML5, CSS3, JavaScript (ES6+), TypeScript, ReactJS, Next.js, Angular,
+                            Tailwind CSS</div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Backend & DB</h4>
+                        <div class="skill-tags">Node.js, NestJS, REST APIs, MySQL, MongoDB</div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>State & Forms</h4>
+                        <div class="skill-tags">React Context API, React Hook Form, Zod Validations</div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Cloud & DevOps</h4>
+                        <div class="skill-tags">AWS, Google Cloud Platform, EC2 Management, Docker</div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Tools</h4>
+                        <div class="skill-tags">Git, Bitbucket, Jira, WordPress, Shopify, Cloudflare - CDN</div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Core Skills</h4>
+                        <div class="skill-tags">Responsive Design, SEO Optimization, Performance Optimization, SSR &
+                            CSR, Agile Methodology</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-container">
+                    <div class="education">
+                        <div class="degree">Master's in Computer Applications</div>
+                        <div class="university">Amity University</div>
+                        <div class="edu-details">
+                            Graduated: June 2022 | GPA: 8.0
+                        </div>
+                    </div>
+                    <div class="education">
+                        <div class="degree">Bachelor's in Computer Applications</div>
+                        <div class="university">Amity University</div>
+                        <div class="edu-details">
+                            Graduated: June 2019 | GPA: 7.0
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2 class="section-title">Research Publications</h2>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">A Comprehensive Study on Cybersecurity Awareness and Practices</div>
+                        <div class="company">IEEE Xplore Digital Library</div>
+                        <div class="duration">Published 2023</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Authored and published a research paper in IEEE Xplore focusing on cybersecurity awareness
+                            and best practices in modern organizations.</li>
+                        <li>Conducted comprehensive analysis of current cybersecurity threats and mitigation strategies
+                            across different industry sectors.</li>
+                        <li>Collaborated with academic researchers to develop frameworks for improving cybersecurity
+                            education and implementation.</li>
+                        <li>Research findings contribute to better understanding of cybersecurity challenges in digital
+                            transformation initiatives.</li>
+                        <li>Available at: <a href="https://ieeexplore.ieee.org/document/10046884" target="_blank"
+                                style="color: #1a2a6c; text-decoration: none;">IEEE Xplore</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="section">
+                <h2 class="section-title">Projects</h2>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">ScanMyCar - QR Vehicle Notification</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Built a privacy-focused <b>vehicle notification system</b> allowing users to alert owners
+                            via <b>QR codes</b> without sharing contact details. <a
+                                href="https://scanmycar-frontend.vercel.app/" target="_blank"
+                                style="color: #1a2a6c; text-decoration: none;">Live Demo</a></li>
+                        <li>Developed a responsive frontend using <b>Next.js 16</b> and <b>Tailwind CSS</b>, featuring
+                            smooth animations with <b>Framer Motion</b>.</li>
+                        <li>Architected a robust backend with <b>NestJS</b> and <b>Prisma</b> to handle vehicle
+                            registration, secure alert dispatching, and user management.</li>
+                        <li>Implemented a <b>preset message system</b> (e.g., "Wrong Parking", "Lights On") to enable
+                            quick and effective communication.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">WorkTime - Work Hours Calculator</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Developed a <b>Progressive Web App (PWA)</b> using <b>Next.js 16</b> to help professionals
+                            track work hours and calculate departure times. <a
+                                href="https://github.com/maazshahid18/workhours" target="_blank"
+                                style="color: #1a2a6c; text-decoration: none;">GitHub</a> | <a
+                                href="https://workhours-sable.vercel.app/" target="_blank"
+                                style="color: #1a2a6c; text-decoration: none;">Live Demo</a></li>
+                        <li>Implemented <b>smart time calculation</b> logic with customizable settings for required
+                            hours and buffer percentages.</li>
+                        <li>Integrated <b>LocalStorage API</b> for data persistence and offline support, ensuring a
+                            seamless user experience.</li>
+                        <li>Designed a modern, responsive UI with <b>CSS Modules</b>, featuring smooth animations and a
+                            toggle for 12h/24h time formats.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Ecommerce Website</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Built a full-fledged <b>e-commerce website</b> from scratch, integrating <b>Next.js</b> for
+                            the frontend, <b>NestJS</b> for the backend, and <b>MySQL</b> for database management. <a
+                                href="https://ecommerce-frontend-smoky-chi.vercel.app/cart" target="_blank">View
+                                Project</a></li>
+                        <li>Implemented dynamic form validations across user inputs, including registration, product
+                            forms, and checkout process.</li>
+                        <li>Designed a complete checkout workflow with order summary, payment capture simulation, and
+                            cart management features.</li>
+                        <li>Integrated an order confirmation emailing system, improving customer experience and backend
+                            workflow efficiency.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Thetecheaven</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Made a comprehensive tech blogging website using <b>WordPress</b> during college years,
+                            showcasing early web development proficiency.</li>
+                        <li>Demonstrated keen technical knowledge through in-depth articles and tutorials, providing
+                            valuable content to readers.</li>
+                        <li>Gained early experience in content management systems and web development principles, laying
+                            a strong foundation.</li>
+                        <li>Built a foundation for understanding user engagement and content strategy, crucial for
+                            online platforms.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">FRU Solutions</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Built a comprehensive courier partner solution with end-to-end tracking capabilities,
+                            enhancing logistical oversight.</li>
+                        <li>Implemented a <b>real-time courier tracking system</b> for an enhanced customer experience
+                            and increased transparency.</li>
+                        <li>Built a robust <b>inventory management system</b> for efficient logistics operations,
+                            optimizing stock control.</li>
+                        <li>Created a user-friendly interface for both customers and courier partners, improving
+                            usability and workflow.</li>
+                        <li>Integrated multiple APIs for seamless tracking and management workflows, ensuring data
+                            consistency.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
