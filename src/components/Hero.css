@@ -135,6 +135,10 @@
         gap: 3rem;
     }
 
+    .code-block {
+        text-align: left;
+    }
+
     .hero-content {
         display: flex;
         flex-direction: column;
