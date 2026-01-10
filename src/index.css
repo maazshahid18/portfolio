@@ -1,16 +1,16 @@
-/* Base Variables (Shared) */
 :root {
   --font-main: 'Outfit', sans-serif;
-  --accent-primary: #0ea5e9;
-  --accent-secondary: #06b6d4;
-  --accent-glow: rgba(14, 165, 233, 0.5);
+  --accent-primary: #0284c7;
+  /* Slightly darker blue for contrast on white */
+  --accent-secondary: #0891b2;
+  --accent-glow: rgba(2, 132, 199, 0.5);
 
-  --bg-primary: #030712;
-  --bg-secondary: #0f172a;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --card-bg: rgba(30, 41, 59, 0.7);
-  --card-border: rgba(148, 163, 184, 0.1);
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f4f6;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-border: rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -21,6 +21,8 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -28,6 +30,7 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
+  width: 100%;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
