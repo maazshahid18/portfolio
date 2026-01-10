@@ -1,15 +1,14 @@
 :root {
   --font-main: 'Outfit', sans-serif;
-  --accent-primary: #0284c7;
-  /* Slightly darker blue for contrast on white */
-  --accent-secondary: #0891b2;
-  --accent-glow: rgba(2, 132, 199, 0.5);
+  --accent-primary: #0369a1;
+  --accent-secondary: #0e7490;
+  --accent-glow: rgba(3, 105, 161, 0.3);
 
-  --bg-primary: #ffffff;
-  --bg-secondary: #f3f4f6;
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
-  --card-bg: rgba(255, 255, 255, 0.8);
+  --bg-primary: #f0f2f5;
+  --bg-secondary: #e2e8f0;
+  --text-primary: #020617;
+  --text-secondary: #334155;
+  --card-bg: rgba(255, 255, 255, 0.95);
   --card-border: rgba(0, 0, 0, 0.1);
 }
 
