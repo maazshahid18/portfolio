@@ -60,6 +60,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .glow-circle {
@@ -72,27 +73,107 @@
     animation: pulse 4s infinite ease-in-out;
 }
 
-.code-block {
-    font-family: 'Fira Code', monospace;
-    font-size: 1rem;
-    line-height: 1.6;
-    width: 100%;
-    max-width: 450px;
-    background: rgba(15, 23, 42, 0.8);
-    white-space: pre-wrap;
-    word-wrap: break-word;
+.floating-tech-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    width: 380px;
+    max-width: 100%;
 }
 
-.code-purple {
-    color: #c084fc;
+.tech-widget {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 1.5rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
 }
 
-.code-blue {
-    color: #60a5fa;
+.tech-widget:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
 }
 
-.code-green {
-    color: #4ade80;
+.widget-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--bg-secondary);
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.tech-widget h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.3rem;
+}
+
+.tech-widget p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* Variant Styles */
+.widget-blue .widget-icon {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.1);
+}
+
+.widget-blue:hover .widget-icon {
+    background: #2563eb;
+    color: white;
+}
+
+.widget-purple .widget-icon {
+    color: #9333ea;
+    background: rgba(147, 51, 234, 0.1);
+}
+
+.widget-purple:hover .widget-icon {
+    background: #9333ea;
+    color: white;
+}
+
+.widget-green .widget-icon {
+    color: #16a34a;
+    background: rgba(22, 163, 74, 0.1);
+}
+
+.widget-green:hover .widget-icon {
+    background: #16a34a;
+    color: white;
+}
+
+.widget-orange .widget-icon {
+    color: #ea580c;
+    background: rgba(234, 88, 12, 0.1);
+}
+
+.widget-orange:hover .widget-icon {
+    background: #ea580c;
+    color: white;
+}
+
+@media (max-width: 480px) {
+    .floating-tech-grid {
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .tech-widget {
+        padding: 1.2rem;
+    }
 }
 
 .hero-bg-glow {
@@ -171,25 +252,19 @@
 
     .hero-actions {
         flex-direction: column;
-        width: 100%;
-        gap: 0.8rem;
+        gap: 1rem;
+        width: auto;
+        min-width: 250px;
     }
 
     .btn-primary,
     .btn-outline {
         width: 100%;
+        /* Keep them same width relative to container, but container is now restricted */
         justify-content: center;
     }
 
-    .code-block {
-        font-size: 0.85rem;
-        /* Smaller font for code */
-        padding: 1.5rem;
-        overflow-x: auto;
-        /* Allow horizontal scroll if needed */
-        max-width: 100%;
-        /* Ensure it fits container */
-    }
+
 
     .glow-circle {
         width: 300px;

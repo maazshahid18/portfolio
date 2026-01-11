@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, ArrowRight } from 'lucide-react';
+import { Download, ArrowRight, Code2, Database, Layout, Server, Zap, Globe } from 'lucide-react';
 import { personalInfo } from '../data';
 import './Hero.css';
 
@@ -42,17 +42,35 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
                     <div className="glow-circle"></div>
-                    <div className="code-block glass-card">
-                        <pre>
-                            <code>
-                                <span className="code-purple">const</span> <span className="code-blue">developer</span> = &#123;
-                                {'\n'}  name: <span className="code-green">'{personalInfo.name}'</span>,
-                                {'\n'}  role: <span className="code-green">'{personalInfo.role}'</span>,
-                                {'\n'}  skills: [<span className="code-green">'React'</span>, <span className="code-green">'Next.js'</span>, <span className="code-green">'Node'</span>],
-                                {'\n'}  hardWorker: <span className="code-purple">true</span>
-                                {'\n'}&#125;;
-                            </code>
-                        </pre>
+                    <div className="floating-tech-grid">
+                        <div className="tech-widget widget-blue">
+                            <div className="widget-icon">
+                                <Layout size={24} />
+                            </div>
+                            <h3>Frontend</h3>
+                            <p>React, Next.js</p>
+                        </div>
+                        <div className="tech-widget widget-purple">
+                            <div className="widget-icon">
+                                <Server size={24} />
+                            </div>
+                            <h3>Backend</h3>
+                            <p>Node, NestJS</p>
+                        </div>
+                        <div className="tech-widget widget-green">
+                            <div className="widget-icon">
+                                <Database size={24} />
+                            </div>
+                            <h3>Database</h3>
+                            <p>SQL, Mongo</p>
+                        </div>
+                        <div className="tech-widget widget-orange">
+                            <div className="widget-icon">
+                                <Zap size={24} />
+                            </div>
+                            <h3>Speed</h3>
+                            <p>Optimized</p>
+                        </div>
                     </div>
                 </motion.div>
             </div>
