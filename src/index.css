@@ -12,6 +12,13 @@
   --card-border: rgba(0, 0, 0, 0.1);
 }
 
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
 * {
   margin: 0;
   padding: 0;
