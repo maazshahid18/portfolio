@@ -74,6 +74,18 @@ export const projects = [
     }
   },
   {
+    title: "Celebration App",
+    description: "Dynamic, multi-theme application for creating customized proposals and celebratory pages with immersive visual and audio effects.",
+    tech: ["Next.js", "React", "Supabase", "SQL"],
+    links: {}
+  },
+  {
+    title: "DriveLog Dashboard",
+    description: "Comprehensive vehicle tracking dashboard featuring real-time fuel efficiency calculations and core metric visualizations.",
+    tech: ["Next.js", "Analytics", "API Integration", "UI Grid"],
+    links: {}
+  },
+  {
     title: "WorkTime - Work Hours Calculator",
     description: "Progressive Web App (PWA) to help professionals track work hours and calculate departure times.",
     tech: ["Next.js 16", "PWA", "LocalStorage", "CSS Modules"],
