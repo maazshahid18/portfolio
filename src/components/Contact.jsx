@@ -74,7 +74,7 @@ const Contact = () => {
                             </div>
                             <div className="info-text">
                                 <span className="label">Email Protocol</span>
-                                <a href="mailto:mzperwez786@gmail.com" className="value">Send Email</a>
+                                <a href={`mailto:${personalInfo.email}`} className="value">{personalInfo.email}</a>
                             </div>
                         </div>
 
@@ -84,7 +84,7 @@ const Contact = () => {
                             </div>
                             <div className="info-text">
                                 <span className="label">Voice Line</span>
-                                <span className="value">Available on Request</span>
+                                <span className="value">{personalInfo.phone}</span>
                             </div>
                         </div>
 
