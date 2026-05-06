@@ -29,7 +29,7 @@ const Hero = () => {
                         <a href="#projects" className="btn-primary">
                             View My Work <ArrowRight size={18} />
                         </a>
-                        <a href="https://drive.google.com/file/d/1eV4XGFmCE1U1mmOr5LPCx9RWWCKm3Fku/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn-outline">
+                        <a href="https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto" target="_blank" rel="noopener noreferrer" className="btn-outline">
                             Download CV <Download size={18} />
                         </a>
                     </div>
